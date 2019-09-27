@@ -66,19 +66,25 @@ namespace Laboratorio_5_OOP_201902
             }
             return optionNumber;
         }
-        public static void ConsoleOutput(string message)
+        public static void ShowProgramMessage (string message)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(message);
             Console.ResetColor();
         }
         public static void ShowListOptions(string title, List<String> options)
         {
-            ConsoleOutput(title);
+            ShowProgramMessage(title);
             for (int i = 0; i < options.Count; i++)
             {
                 Console.WriteLine($"({i}) {options[i]}");
             }
+        }
+
+        public static void ClearConsole()
+        {
+            Console.Clear();
         }
 
 
