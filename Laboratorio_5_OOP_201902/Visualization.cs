@@ -34,7 +34,7 @@ namespace Laboratorio_5_OOP_201902
             Console.WriteLine("Select one Deck:");
             for (int i = 0; i < decks.Count; i++)
             {
-                Console.WriteLine($"({i}) {decks[i]}");
+                Console.WriteLine($"({i}) Deck {i + 1}");
             }
         }
 
@@ -43,7 +43,7 @@ namespace Laboratorio_5_OOP_201902
             Console.WriteLine("Select one Deck:");
             for (int i = 0; i < captains.Count; i++)
             {
-                Console.WriteLine($"({i}) {captains[i].Name} {captains[i].Effect}");
+                Console.WriteLine($"({i}) {captains[i].Name} : {captains[i].Effect}");
             }
         }
 
