@@ -7,6 +7,8 @@ namespace Laboratorio_5_OOP_201902
 {
     public static class Visualization
     {
+        
+
         public static void ShowHand(Hand hand)
         {
             for (int i = 0; i < hand.Cards.Count; i++)
@@ -14,15 +16,15 @@ namespace Laboratorio_5_OOP_201902
                 if (hand.Cards[i].Type == Enums.EnumType.melee || hand.Cards[i].Type == Enums.EnumType.range || hand.Cards[i].Type == Enums.EnumType.range)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Carta " + hand.Cards[i]);
-                    Console.WriteLine("Id carta " + i);
+                    Console.WriteLine("Id carta: " + i);
+                    Console.WriteLine("Nombre Carta: " + hand.Cards[i].Name);
                     Console.ResetColor();
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine("Carta " + hand.Cards[i]);
-                    Console.WriteLine("Id carta " + i);
+                    Console.WriteLine("Id carta: " + i);
+                    Console.WriteLine("Nombre Carta: " + hand.Cards[i].Name);
                     Console.ResetColor();
                 }
 
@@ -38,7 +40,7 @@ namespace Laboratorio_5_OOP_201902
             }
         }
 
-        public static void ShowCapatins(List<SpecialCard> captains)
+        public static void ShowCapatains(List<SpecialCard> captains)
         {
             Console.WriteLine("Select one Deck:");
             for (int i = 0; i < captains.Count; i++)
@@ -85,6 +87,13 @@ namespace Laboratorio_5_OOP_201902
         public static void ClearConsole()
         {
             Console.Clear();
+        }
+
+        public static void Play(Player player, Deck deck, SpecialCard captain, Hand hand)
+        {
+
+            Visualization.ShowHand(hand);
+
         }
 
 

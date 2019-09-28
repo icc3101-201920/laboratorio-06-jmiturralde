@@ -65,9 +65,9 @@ namespace Laboratorio_5_OOP_201902
         }
 
         //Metodos
-        public bool CheckIfEndGame()
+        public bool CheckIfEndGame(Player player1, Player player2)
         {
-            if (players[0].LifePoints == 0 || players[1].LifePoints == 0)
+            if (player1.LifePoints == 0 || player2.LifePoints == 0)
             {
                 return true;
             }
